@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+.mian{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo a img{
+    margin-top: 10px;
+    width: 200px;
+    margin-left: 30px;
+}
+.calculator {
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 15px;
+    background: transparent;
+    box-shadow: 0.5px 3.5px 15px rgba(113, 115, 119, 0.5);
+}
+
+input {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 25px;
+    background: transparent;
+    box-shadow: 0.5px 3.5px 15px rgba(84, 84, 84, 0.5);
+    text-align: right;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+input::placeholder {
+    color: white;
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    margin-left: 33px;
+}
+button:hover{
+    font-size: 25px;
+}
+
+.equal-btn {
+    background-color: #fb7c14;
+}
+
+.operator {
+    color: green;
+}
+
+/* Bubbles */
+
+spanBox {
+    position: fixed;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: ani 10s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        transform: scale(0) translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(1) translateY(-800%) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+@media only screen and (max-width: 530px) {
+    button {
+        width: 50px;
+        height: 50px;
+        margin: 8px;
+        border-radius: 50%;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .calculator {
+        margin: 0 10px;
+    }
+  
+}
+@media only screen and (max-width: 385px) and (min-width: 300px)  {
+    button {
+        width: 43px;
+        height: 43px;
+        margin: 8px;
+        border-radius: 50%;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .calculator {
+        margin: 0 10px;
+    }
+} 
+@media only screen and (max-width: 300px) and (min-width: 100px)  {
+    button {
+        width: 30px;
+        height: 30px;
+        margin: 8px;
+        border-radius: 50%;
+        font-size: 15px;
+        margin-left: 13px;
+    }
+    .calculator {
+        margin: 0 10px;
+    }
+} 
